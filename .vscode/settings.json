@@ -1,0 +1,11 @@
+{
+  "pylint.args":  [
+    "--disable=C0111, E0102, W0622",
+    //"--load-plugins="
+  ],
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.autopep8",
+    "editor.formatOnSave": true
+  },
+  "editor.tabSize": 4,
+}
