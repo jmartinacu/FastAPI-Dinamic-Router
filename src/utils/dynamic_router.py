@@ -51,3 +51,7 @@ def search_routers(module_path: str) -> List[str]:
                 abs_path = os.path.abspath(os.path.join(root, file))
                 abs_paths.append(abs_path)
     return abs_paths
+
+
+def get_current_directory(current_file: str) -> str:
+    return os.path.dirname(current_file)

@@ -1,9 +1,5 @@
-import os
-from utils.dynamic_router import search_routers
+from utils.dynamic_router import search_routers, get_current_directory
 
-MODULE_PATH = f'{os.getcwd()}{os.path.sep}src{os.path.sep}modules{os.path.sep}core'
+package_path = get_current_directory(__file__)
 
-router_urls = search_routers(MODULE_PATH)
-
-print(router_urls, len(router_urls))
-print(os.getcwd())
+router_urls = search_routers(package_path)
