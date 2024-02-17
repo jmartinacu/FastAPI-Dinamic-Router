@@ -1,15 +1,16 @@
 from fastapi import APIRouter
+from modules.core.auth import controller
 
 router = APIRouter(
-    tags=['auth'],
+    tags=['core'],
 )
 
 
 @router.get('/')
 def root():
-    return 'Hello core auth router!'
+    return controller.root_controller()
 
 
 @router.get('/hello')
 def hello():
-    return 'Hello from auth !!'
+    return controller.hello_controller()

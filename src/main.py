@@ -1,8 +1,9 @@
 from fastapi import FastAPI
 from utils.dynamic_router import Routers
 from modules.core.core import router_urls as core_urls
+from modules.cyc.cyc import router_urls as cyc_urls
 
-URLS_ENDPOINTS = core_urls
+URLS_ENDPOINTS = core_urls + cyc_urls
 
 APP_PREFIX = '/v1/api/'
 
